@@ -3,12 +3,6 @@
 # Author Joost Haverkort 
 # https://github.com/DevOats
 
-#if [[ $(/usr/bin/id -u) -ne 0 ]]; then
-#    echo "Script needs to be executed with Sudo"
-#    exit
-#fi
-
-
 # Disable I2C
 echo "Disabling I2C"
 sudo raspi-config nonint do_i2c 1
