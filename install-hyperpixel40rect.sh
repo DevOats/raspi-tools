@@ -27,7 +27,7 @@ echo "Prepending HyperPixel 4.0 config to /boot/config.txt:"
 sudo sed '1i# For HyperPixel 4.0:' -i /boot/config.txt
 sudo sed '2idtoverlay=vc4-kms-dpi-hyperpixel4' -i /boot/config.txt
 sudo sed '3idtparam=rotate=270,touchscreen-swapped-x-y,touchscreen-inverted-y' -i /boot/config.txt
-sudo sed '4i ' -i /boot/config.txt
+sudo sed '4i\n' -i /boot/config.txt
 
 
 echo "Adding HyperPixel 4.0 config to the WayFire config file:"
