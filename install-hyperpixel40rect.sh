@@ -23,11 +23,11 @@ sudo raspi-config nonint do_serial_hw 1
 echo "Disabling Serial Console"
 sudo raspi-config nonint do_serial_cons 1
 
-echo "Prepending HyperPixel 4.0 config to /boot/config.txt:"
-sudo sed '1i# For HyperPixel 4.0:' -i /boot/config.txt
-sudo sed '2idtoverlay=vc4-kms-dpi-hyperpixel4' -i /boot/config.txt
-sudo sed '3idtparam=rotate=270,touchscreen-swapped-x-y,touchscreen-inverted-y' -i /boot/config.txt
-sudo sed '4i\ ' -i /boot/config.txt
+echo "Prepending HyperPixel 4.0 config to /boot/firmware/config.txt:"
+sudo sed '1i# For HyperPixel 4.0:' -i /boot/firmware/config.txt
+sudo sed '2idtoverlay=vc4-kms-dpi-hyperpixel4' -i /boot/firmware/config.txt
+sudo sed '3idtparam=rotate=270,touchscreen-swapped-x-y,touchscreen-inverted-y' -i /boot/firmware/config.txt
+sudo sed '4i\ ' -i /boot/firmware/config.txt
 
 
 echo "Adding HyperPixel 4.0 config to the WayFire config file:"
@@ -40,5 +40,5 @@ echo -e "transform = 270" >> ~/.config/wayfire.ini
 
 echo "Done. Note that this script is not idempotent. Manually removes changes from the following files before rerunning:"
 echo "~/.config/wayfire.ini  (Bottom)"
-echo "/boot/config.txt (top)"
+echo "/boot/firmware/config.txt (top)"
 echo "Please reboot the Raspberri Pi for the changes to take effect."
