@@ -37,10 +37,10 @@ sed '' -i /boot/config.txt
 
 
 echo "Adding HyperPixel 4.0 config to the WayFire config file:"
-echo $WAYFIRE_CONFIG_FILE
-echo -e "\n" > $WAYFIRE_CONFIG_FILE
-echo -e "## For HyperPixel 4.0:\n" > "${WAYFIRE_CONFIG_FILE}"
-echo -e "[output:DPI-1]\n" > "${WAYFIRE_CONFIG_FILE}"
-echo -e "mode = 480x800@60061\n" > "${WAYFIRE_CONFIG_FILE}"
-echo -e "position = 0,0\n" > "${WAYFIRE_CONFIG_FILE}"
-echo -e "transform = 270\n" > "${WAYFIRE_CONFIG_FILE}"
+echo "${WAYFIRE_CONFIG_FILE}"
+echo -e "\n" >> "${WAYFIRE_CONFIG_FILE}"
+echo -e "## For HyperPixel 4.0:\n" >> "${WAYFIRE_CONFIG_FILE}"
+echo -e "[output:DPI-1]\n" >> "${WAYFIRE_CONFIG_FILE}"
+echo -e "mode = 480x800@60061\n" >> "${WAYFIRE_CONFIG_FILE}"
+echo -e "position = 0,0\n" >> "${WAYFIRE_CONFIG_FILE}"
+echo -e "transform = 270\n" >> "${WAYFIRE_CONFIG_FILE}"
