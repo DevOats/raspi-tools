@@ -37,3 +37,8 @@ echo -e "[output:DPI-1]" >> ~/.config/wayfire.ini
 echo -e "mode = 480x800@60061" >> ~/.config/wayfire.ini
 echo -e "position = 0,0" >> ~/.config/wayfire.ini
 echo -e "transform = 270" >> ~/.config/wayfire.ini
+
+echo "Done. Note that this script is not idempotent. Manually removes changes from the following files before rerunning:"
+echo "~/.config/wayfire.ini  (Bottom)"
+echo "/boot/config.txt (top)"
+echo "Please reboot the Raspberri Pi for the changes to take effect."
