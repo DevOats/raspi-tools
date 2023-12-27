@@ -24,16 +24,16 @@ echo "Disabling Serial Console"
 sudo raspi-config nonint do_serial_cons 1
 
 echo "Prepending HyperPixel 4.0 config to /boot/config.txt:"
-sudo sed '# For HyperPixel 4.0:' -i /boot/config.txt
-sudo sed 'dtoverlay=vc4-kms-dpi-hyperpixel4' -i /boot/config.txt
-sudo sed 'dtparam=rotate=270,touchscreen-swapped-x-y,touchscreen-inverted-y' -i /boot/config.txt
-sudo sed '' -i /boot/config.txt
+sudo sed "# For HyperPixel 4.0:" -i /boot/config.txt
+sudo sed "dtoverlay=vc4-kms-dpi-hyperpixel4" -i /boot/config.txt
+sudo sed "dtparam=rotate=270,touchscreen-swapped-x-y,touchscreen-inverted-y" -i /boot/config.txt
+sudo sed "" -i /boot/config.txt
 
 
 echo "Adding HyperPixel 4.0 config to the WayFire config file:"
-echo -e "\n" >> ~/.config/wayfire.ini
-echo -e "## For HyperPixel 4.0:\n" >> ~/.config/wayfire.ini
-echo -e "[output:DPI-1]\n" >> ~/.config/wayfire.ini
-echo -e "mode = 480x800@60061\n" >> ~/.config/wayfire.ini
-echo -e "position = 0,0\n" >> ~/.config/wayfire.ini
-echo -e "transform = 270\n" >> ~/.config/wayfire.ini
+echo -e "" >> ~/.config/wayfire.ini
+echo -e "## For HyperPixel 4.0:" >> ~/.config/wayfire.ini
+echo -e "[output:DPI-1]" >> ~/.config/wayfire.ini
+echo -e "mode = 480x800@60061" >> ~/.config/wayfire.ini
+echo -e "position = 0,0" >> ~/.config/wayfire.ini
+echo -e "transform = 270" >> ~/.config/wayfire.ini
