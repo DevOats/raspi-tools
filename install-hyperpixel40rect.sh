@@ -26,7 +26,7 @@ sudo raspi-config nonint do_serial_cons 1
 echo "Prepending HyperPixel 4.0 config to /boot/firmware/config.txt:"
 sudo sed '1i# For HyperPixel 4.0:' -i /boot/firmware/config.txt
 sudo sed '2idtoverlay=vc4-kms-dpi-hyperpixel4' -i /boot/firmware/config.txt
-sudo sed '3idtparam=rotate=270,touchscreen-swapped-x-y,touchscreen-inverted-y' -i /boot/firmware/config.txt
+sudo sed '3idtparam=rotate=90,touchscreen-swapped-x-y,touchscreen-inverted-y' -i /boot/firmware/config.txt
 sudo sed '4i\ ' -i /boot/firmware/config.txt
 
 
